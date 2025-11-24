@@ -17,20 +17,20 @@ Aorta data (sample_aorta_data_updated.h5ad) can be downloaded here: https://driv
 
 ## Repository Structure
 
+```text
 GENEPT-TASKS/
+├── sample_aorta_data_updated.h5ad       # Aorta AnnData from GenePT authors
+├── GenePT_gene_embedding_ada_text.pickle# dict: gene → 1536-d embedding (ada-002)
+├── gene_list.npy                        # extracted gene names
+├── gene_embeddings_ada002.npy           # extracted embedding matrix
 │
-├── sample_aorta_data_updated.h5ad # Aorta AnnData from GenePT authors
-├── GenePT_gene_embedding_ada_text.pickle
-│ # dict: gene → 1536-d embedding (ada-002)
-├── gene_list.npy # extracted gene names
-├── gene_embeddings_ada002.npy # extracted embedding matrix
+├── build_genept.py                      # vectorized GenePT-w embedding builder
+├── embedding_matrix.py                  # converts pickle → npy matrix
+├── run_clustering.py                    # unsupervised ARI / AMI / ASW
+├── run_knn.py                           # supervised accuracy / F1
 │
-├── build_genept.py # vectorized GenePT-w embedding builder
-├── embedding_matrix.py # converts pickle → npy matrix
-├── run_clustering.py # unsupervised ARI / AMI / ASW
-├── run_knn.py # supervised accuracy / F1
-│
-└── aorta_genept_w.npy # generated GenePT-w cell embeddings
+└── aorta_genept_w.npy                   # generated GenePT-w cell embeddings
+```
 
 
 
